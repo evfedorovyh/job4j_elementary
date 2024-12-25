@@ -7,11 +7,12 @@ public class Machine {
         int[] result = new int[100];
         int size = 0;
         int i = 0;
-        while ((money - price) > 0) {
-            money -= coins[i];
-            result[size] = coins[i];
-            size++;
-            if ((money - price) < coins[i]) {
+        while ((money - price) != 0) {
+            if ((money - price) >= coins[i]) {
+                money -= coins[i];
+                result[size] = coins[i];
+                size++;
+            } else {
                 i++;
             }
         }
