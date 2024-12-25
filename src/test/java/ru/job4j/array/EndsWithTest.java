@@ -20,4 +20,12 @@ public class EndsWithTest {
         boolean result = EndsWith.endsWith(word, postfix);
         assertThat(result).isFalse();
     }
+
+    @Test
+    public void whenNotEndWithPrefix2ThenFalse() {
+        char[] word = {'o'};
+        char[] post = {'a'};
+        boolean result = EndsWith.endsWith(word, post);
+        assertThat(result).isFalse();
+    }
 }
