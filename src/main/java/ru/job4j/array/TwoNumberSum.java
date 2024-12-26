@@ -3,18 +3,18 @@ package ru.job4j.array;
 public class TwoNumberSum {
     public static int[] getIndexes(int[] array, int target) {
         int i = 0;
-        int end = array.length - 1;
-        int j = end;
+        int j = array.length - 1;
         int[] result = new int[] {};
+        int sum;
         while (i != j) {
-            if ((array[i] + array[j]) == target) {
-                result = new int[] {i, j};
-                return result;
-            }
-            j--;
-            if (i == j && i < end - 1) {
+            sum = array[i] + array[j];
+            if (sum > target) {
+                j--;
+            } else if (sum < target) {
                 i++;
-                j = end;
+            } else if (sum == target) {
+                result = new int[] {i, j};
+                break;
             }
         }
         return result;
