@@ -12,7 +12,7 @@ public class TwoNumberSum {
                 j--;
             } else if (sum < target) {
                 i++;
-            } else if (sum == target) {
+            } else {
                 result = new int[] {i, j};
                 break;
             }
