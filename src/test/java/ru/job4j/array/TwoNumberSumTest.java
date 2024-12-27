@@ -41,7 +41,4 @@ class TwoNumberSumTest {
         assertThat(result).isEqualTo(expected);
     }
 
-    @Test
-    void getIndexes() {
-    }
 }
